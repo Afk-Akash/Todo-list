@@ -1,0 +1,31 @@
+format_version: 10
+pipelines:
+  5thPipeline:
+    group: defaultGroup
+    label_template: ${COUNT}
+    lock_behavior: none
+    display_order: -1
+    materials:
+      git-28c2a97:
+        git: https://github.com/Afk-Akash/Todo-list
+        shallow_clone: false
+        auto_update: true
+        branch: main
+    stages:
+    - Testing:
+        fetch_materials: true
+        keep_artifacts: false
+        clean_workspace: false
+        approval:
+          type: success
+          allow_only_on_success: false
+        jobs:
+          run-unit-test:
+            timeout: 0
+            tasks:
+            - exec:
+                arguments:
+                - test
+                - ./...
+                command: go
+                run_if: passed
