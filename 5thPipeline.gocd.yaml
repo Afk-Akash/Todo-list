@@ -29,7 +29,7 @@ pipelines:
                 - ./...
                 command: go
                 run_if: passed
-      - building:
+      - building-exe:
         fetch_materials: true
         keep_artifacts: false
         clean_workspace: false
