@@ -1,6 +1,6 @@
 format_version: 10
 pipelines:
-  5thPipeline:
+  todo-backend-build:
     group: defaultGroup
     label_template: ${COUNT}
     lock_behavior: none
@@ -27,21 +27,5 @@ pipelines:
                 arguments:
                 - test
                 - ./...
-                command: go
-                run_if: passed
-      - building-exe:
-        fetch_materials: true
-        keep_artifacts: false
-        clean_workspace: false
-        approval:
-          type: success
-          allow_only_on_success: false
-        jobs:
-          build:
-            timeout: 0
-            tasks:
-            - exec:
-                arguments:
-                - build
                 command: go
                 run_if: passed
