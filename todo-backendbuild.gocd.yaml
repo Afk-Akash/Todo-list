@@ -6,7 +6,7 @@ pipelines:
     lock_behavior: none
     display_order: -1
     materials:
-      git-28c2a97:
+      git-repo:
         git: https://github.com/Afk-Akash/Todo-list
         shallow_clone: false
         auto_update: true
@@ -20,7 +20,7 @@ pipelines:
           type: success
           allow_only_on_success: false
         jobs:
-          run-unit-test:
+          build-publish:
             timeout: 0
             tasks:
             - exec:
