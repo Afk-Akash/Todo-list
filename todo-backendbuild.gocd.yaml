@@ -25,7 +25,11 @@ pipelines:
             tasks:
             - exec:
                 arguments:
-                - test
-                - ./...
-                command: go
+                - dockerize
+                command: make
+                run_if: passed
+            - exec:
+                arguments:
+                - publish
+                command: make
                 run_if: passed
