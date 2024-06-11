@@ -10,6 +10,14 @@ import (
 	"github.com/gofiber/fiber/v2"
 )
 
+func Hello(ctx *fiber.Ctx) error {
+	ctx.Status(400)
+	return ctx.JSON(fiber.Map{
+		"message": "Hi...How are you this is testing api",
+		"status":  200,
+	})
+}
+
 func AddTodo(ctx *fiber.Ctx) error {
 	cookie := ctx.Cookies("jwt")
 	fmt.Println(ctx.Cookies("jwtToken"))

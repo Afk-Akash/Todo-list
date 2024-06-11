@@ -8,6 +8,7 @@ import (
 )
 
 func SetUP(app *fiber.App) {
+	app.Get("/api/hello", todocontroller.Hello)
 	app.Post("/api/register", controller.Register)
 	app.Post("/api/login", controller.Login)
 	app.Get("api/getTodo", todocontroller.GetTODO)
