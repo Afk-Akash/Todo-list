@@ -1,7 +1,7 @@
 package route
 
 import (
-	controller "todolist/Controller"
+	// controller "todolist/Controller"
 	todocontroller "todolist/TodoController"
 
 	"github.com/gofiber/fiber/v2"
@@ -9,18 +9,20 @@ import (
 
 func SetUP(app *fiber.App) {
 	app.Get("/api/hello", todocontroller.Hello)
-	app.Post("/api/register", controller.Register)
-	app.Post("/api/login", controller.Login)
-	app.Get("api/getTodo", todocontroller.GetTODO)
-	app.Get("api/mob-getTodo", todocontroller.GetTODOMobile)
+	app.Get("/api/testing", todocontroller.Testing)
 
-	app.Post("api/addTodo", todocontroller.AddTodo)
-	app.Post("api/mob-addTodo", todocontroller.AddTodoMobile)
+	// app.Post("/api/register", controller.Register)
+	// app.Post("/api/login", controller.Login)
+	// app.Get("api/getTodo", todocontroller.GetTODO)
+	// app.Get("api/mob-getTodo", todocontroller.GetTODOMobile)
 
-	app.Put("api/update", todocontroller.UpdateTodo)
-	app.Put("api/mob-update", todocontroller.UpdateTodoMobile)
+	// app.Post("api/addTodo", todocontroller.AddTodo)
+	// app.Post("api/mob-addTodo", todocontroller.AddTodoMobile)
 
-	app.Delete("api/delete", todocontroller.DeleteTodo)
-	app.Delete("api/mob-delete", todocontroller.DeleteTodoMobile)
+	// app.Put("api/update", todocontroller.UpdateTodo)
+	// app.Put("api/mob-update", todocontroller.UpdateTodoMobile)
+
+	// app.Delete("api/delete", todocontroller.DeleteTodo)
+	// app.Delete("api/mob-delete", todocontroller.DeleteTodoMobile)
 
 }

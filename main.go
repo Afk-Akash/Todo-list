@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 	"log"
-	database "todolist/Database"
+	// database "todolist/Database"
 	route "todolist/Route"
 
 	"github.com/gofiber/fiber/v2"
@@ -12,7 +12,7 @@ import (
 
 func main() {
 	fmt.Println("Hi")
-	database.DBconnect()
+	// database.DBconnect()
 
 	app := fiber.New()
 	corsConfig := cors.Config{

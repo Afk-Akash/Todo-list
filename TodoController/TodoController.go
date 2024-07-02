@@ -11,10 +11,19 @@ import (
 )
 
 func Hello(ctx *fiber.Ctx) error {
-	ctx.Status(400)
+	ctx.Status(200)
 	return ctx.JSON(fiber.Map{
 		"message": "Hi...How are you this is testing api",
 		"status":  200,
+	})
+}
+
+func Testing(ctx *fiber.Ctx) error {
+	ctx.Status(200)
+	return ctx.JSON(fiber.Map{
+		"message": "testing api",
+		"status":  200,
+		"hello": "hello",
 	})
 }
 
